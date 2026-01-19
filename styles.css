@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.contenedor-entrada {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#nuevaTarea {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#nuevaTarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#agregar {
+    padding: 12px 25px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#agregar:hover {
+    background: #5568d3;
+}
+
+#listaTareas {
+    list-style: none;
+}
+
+#listaTareas li {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+#listaTareas li:hover {
+    transform: translateX(5px);
+}
+
+#listaTareas span {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+.completada {
+    text-decoration: line-through;
+    color: #999 !important;
+}
+
+.grupo-botones {
+    display: flex;
+    gap: 8px;
+}
+
+.boton-completar {
+    padding: 8px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-completar:hover:not(:disabled) {
+    background: #218838;
+}
+
+.boton-completar:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.boton-eliminar {
+    padding: 8px 15px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-eliminar:hover {
+    background: #c82333;
+}
+
+.estado-vacio {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.texto-estado-vacio {
+    color: #999;
+    font-size: 18px;
+}
